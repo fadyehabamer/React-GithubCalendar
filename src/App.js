@@ -38,7 +38,7 @@ export default class App extends Component {
         </h3>
 
         <form  className="inputs">
-          <input onChange={this.handleInputChange} type="text" value={this.state.name} placeholder='Enter Github UserName' />
+          <input onChange={this.handleInputChange} type="text" placeholder='Enter Github UserName' />
 
         </form>
 
