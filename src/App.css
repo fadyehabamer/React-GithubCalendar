@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding:20px
+}
+
+.App-logo {
+  height: 4rem;
+  pointer-events: none;
+}
+
+
+
