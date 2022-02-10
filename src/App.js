@@ -1,4 +1,4 @@
-import logo from './assets/logo.svg';
+import logo from './assets/logo3.svg';
 import './App.css';
 import React, { Component } from 'react'
 import Calendar from './components/Calendar';
@@ -9,11 +9,6 @@ export default class App extends Component {
     name: 'fadyehabamer',
   }
 
-  // handleInputChange = (e) => {
-  //   this.setState({
-  //     [e.target.id]: e.target.value,
-  //   })
-  // }
 
   handleSubmit = (e) => {
     e.preventDefault()
@@ -22,7 +17,6 @@ export default class App extends Component {
       name: this.refs.name.value,
     })
   }
-
 
 
 
@@ -39,16 +33,20 @@ export default class App extends Component {
         </h3>
 
         <form onSubmit={this.handleSubmit} className="inputs">
-          <input id="name" type="text" ref="name" placeholder='Enter Github UserName' />
+          <input autocomplete="off" id="name" type="text" ref="name" placeholder='Enter Github UserName' />
           <input type="submit" value="Search" />
         </form>
 
         <h3>
           @ {this.state.name} Github Contributions
         </h3>
-        <Calendar username={this.state.name} /> :
+        <Calendar username={this.state.name} />
 
-
+        <h4>
+          Made With Passion By <a href="https://www.github.com/fadyehabamer"> 
+            Fady Ehab Amer
+           </a>
+        </h4>
       </div>
     );
   }
