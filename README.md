@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./src/assets/React Github Component.png"
+  <img src="./src/assets/cover.png">
 </p>
