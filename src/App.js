@@ -43,9 +43,9 @@ export default class App extends Component {
         <Calendar username={this.state.name} />
 
         <h4>
-          Made With Passion By <a href="https://www.github.com/fadyehabamer"> 
+          Made With Passion By <a href="https://www.github.com/fadyehabamer">
             Fady Ehab Amer
-           </a>
+          </a>
         </h4>
       </div>
     );
