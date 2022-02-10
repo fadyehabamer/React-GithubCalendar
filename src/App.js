@@ -7,21 +7,22 @@ import Calendar from './components/Calendar';
 export default class App extends Component {
   state = {
     name: 'fadyehabamer',
-    
   }
 
-  handleInputChange = (e) => {
-    this.setState({
-      name: e.target.value,
-    })
-  }
+  // handleInputChange = (e) => {
+  //   this.setState({
+  //     [e.target.id]: e.target.value,
+  //   })
+  // }
 
   handleSubmit = (e) => {
     e.preventDefault()
+
     this.setState({
-      name: '',
+      name: this.refs.name.value,
     })
   }
+
 
 
 
@@ -37,12 +38,14 @@ export default class App extends Component {
           A React component to display a GitHub contributions calendar
         </h3>
 
-        <form  className="inputs">
-          <input onChange={this.handleInputChange} type="text" placeholder='Enter Github UserName' />
-
+        <form onSubmit={this.handleSubmit} className="inputs">
+          <input id="name" type="text" ref="name" placeholder='Enter Github UserName' />
+          <input type="submit" value="Search" />
         </form>
 
-
+        <h3>
+          @ {this.state.name} Github Contributions
+        </h3>
         <Calendar username={this.state.name} /> :
 
 
