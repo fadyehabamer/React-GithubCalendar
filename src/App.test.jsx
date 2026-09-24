@@ -3,9 +3,8 @@ import App from './App';
 
 // The real component fetches from github-contributions-api.jogruber.de;
 // replace it with a stub that just shows which username it received.
-jest.mock('react-github-calendar', () => ({
-  __esModule: true,
-  default: ({ username }) => <div data-testid="calendar">calendar for {username}</div>,
+vi.mock('react-github-calendar', () => ({
+  GitHubCalendar: ({ username }) => <div data-testid="calendar">calendar for {username}</div>,
 }));
 
 const search = (value) => {
