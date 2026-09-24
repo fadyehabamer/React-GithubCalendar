@@ -4,9 +4,9 @@ import GitHubCalendar from 'react-github-calendar';
 
 export default function Calendar(props) {
     return (
-        <p>
+        <div className="calendar">
             <GitHubCalendar username={props.username} />
-        </p>
+        </div>
     )
 
 
