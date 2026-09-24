@@ -7,15 +7,22 @@ import Calendar from './components/Calendar';
 export default class App extends Component {
   state = {
     name: 'fadyehabamer',
+    input: '',
   }
 
+  handleChange = (e) => {
+    this.setState({ input: e.target.value })
+  }
 
   handleSubmit = (e) => {
     e.preventDefault()
 
-    this.setState({
-      name: this.refs.name.value,
-    })
+    // GitHub usernames never contain spaces; an empty value would request
+    // the API root instead of a user and show an error.
+    const name = this.state.input.trim().replace(/^@/, '')
+    if (!name) return
+
+    this.setState({ name })
   }
 
 
@@ -33,7 +40,7 @@ export default class App extends Component {
         </h3>
 
         <form onSubmit={this.handleSubmit} className="inputs">
-          <input autocomplete="off" id="name" type="text" ref="name" placeholder='Enter Github UserName' />
+          <input autoComplete="off" id="name" type="text" aria-label="GitHub username" value={this.state.input} onChange={this.handleChange} placeholder='Enter Github UserName' />
           <input type="submit" value="Search" />
         </form>
 
