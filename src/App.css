@@ -67,3 +67,7 @@ input[type=submit] {
 a{
   color:white
 }
+/* keeps the spacing the old <p> wrapper provided */
+.calendar {
+  margin: 1em 0;
+}
