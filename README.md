@@ -4,6 +4,8 @@
 
 # React GitHub Calendar
 
+[![CI](https://github.com/fadyehabamer/React-GithubCalendar/actions/workflows/ci.yml/badge.svg)](https://github.com/fadyehabamer/React-GithubCalendar/actions/workflows/ci.yml)
+
 **Live demo:** https://react-github-calendar.vercel.app
 
 Type a GitHub username and see that user's contributions calendar for the
